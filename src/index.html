@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#008000"/>
+    <title>Fastest Fingers</title>
+    <link rel="stylesheet" type="text/css" href="hello-world.css" media="all">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+<h1 class="vertical-container">Fastest Fingers</h1>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyClC1eYpQhxGVnWg4O39nM3ByShEwrd_Cg",
+    authDomain: "fastest-fingers-d28ee.firebaseapp.com",
+    databaseURL: "https://fastest-fingers-d28ee.firebaseio.com",
+    projectId: "fastest-fingers-d28ee",
+    storageBucket: "",
+    messagingSenderId: "802136079465"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function() {
+            console.log('Service Worker Registered');
+      });
+  }
+</script>
+</body>
+</html>
